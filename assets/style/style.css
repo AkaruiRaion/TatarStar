@@ -1,0 +1,915 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: .7s;
+    font-family: 'Unbounded';
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url(../font/Unbounded-Regular.ttf);
+}
+
+body {
+    background-color: #FDF6F2;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 11vh;
+    background-color: #FDF6F2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    box-shadow: 0 0 10px #333;
+}
+
+.header {
+    height: 11vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h-bar {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.h-bar nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.h-bar nav a {
+    color: #333;
+    font-size: 20px;
+}
+
+.h-dop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.h-dop form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.h-dop form img {
+    position: absolute;
+    left: 20px;
+}
+
+.h-dop input {
+    padding: 18px 60px;
+    font-size: 20px;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 40px;
+    outline: none;
+}
+
+.h-dop .h-a {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #333;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-a .second {
+    display: none;
+}
+
+.h-a:hover .second {
+    display: flex;
+}
+
+.h-a:hover .first {
+    display: none;
+}
+
+.h-dop .h-a:hover {
+    background-color: #333;
+}
+
+.h-dop .h-a:hover svg {
+    stroke: #FDF6F2;
+}
+
+/* Header end */
+
+/* Banner */
+.banner-bg {
+    margin-top: 11vh;
+    height: 89vh;
+    background: url(../img/banner/banner-bg.jpg) center;
+    background-size: cover;
+}
+
+.banner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner span {
+    font-size: 32px;
+}
+
+h1 {
+    color: white;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.b-button {
+    font-size: 32px;
+    color: white;
+    border: 4px solid white;
+    border-radius: 15px;
+    padding: 14px 40px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.b-button:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Banner end */
+
+/* Categories */
+.cat-bg {
+    background: url(../img/categories/cat-bg.png) center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    height: 647px;
+}
+
+.cat a {
+    color: #333;
+}
+
+.cat .new {
+    position: relative;
+    cursor: pointer;
+}
+
+.cat .new p {
+    position: absolute;
+    background-color: white;
+    border-radius: 30px;
+    padding: 8px 30px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.forall {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forall-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.forall-top .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.forall-top .item p {
+    position: absolute;
+    background-color: white;
+    border-radius: 30px;
+    padding: 8px 30px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.forall h2 {
+    font-size: 40px;
+}
+
+.forall-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.forall-bottom button {
+    border: 3px solid #333;
+    background-color: #333;
+    border-radius: 15px;
+    color: white;
+    font-size: 32px;
+    padding: 14px 40px;
+    cursor: pointer;
+}
+
+.forall-bottom button:hover {
+    background-color: transparent;
+    color: #333;
+}
+
+.forall-bottom p {
+    width: 60%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* Categories end */
+
+/* Line */
+.line-blok {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+/* Line end */
+
+/* Actual */
+.actual {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-bottom: 100px;
+}
+
+.actual h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.slider-line {
+    display: flex;
+    gap: 20px;
+}
+
+.actual .card {
+    width: 25%;
+    background-color: #DED4CB;
+    border-radius: 15px;
+    padding: 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.actual .card .text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.actual .card .price {
+    font-size: 28px;
+}
+
+.actual .card .card-new {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 5px 15px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+/* Actual end */
+
+/* Footer */
+footer {
+    border-top: 2px solid #333;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    color: #9B9A99;
+    font-size: 18px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h3 {
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.f-left form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.f-left input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #333;
+    background-color: #FDF6F2;
+    font-size: 18px;
+    padding: 0 0 10px 0;
+    margin-top: 20px;
+}
+
+.f-left button {
+    border: 2px solid #9B9A99;
+    background-color: #9B9A99;
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.f-left button:hover {
+    background-color: transparent;
+    color: #9B9A99;
+}
+
+.f-center {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.f-center nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.f-center nav a {
+    font-size: 18px;
+    color: #7B7B7B;
+}
+
+.f-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.f-right .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Footer end */
+
+/* Catalog */
+.catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 11vh;
+    padding-bottom: 100px;
+    padding-top: 60px;
+}
+
+.kroshki {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kroshki a {
+    color: #979797;
+    font-size: 20px;
+}
+
+.kroshki .active {
+    color: #333;
+}
+
+.kr-line {
+    width: 40px;
+    height: 2px;
+    background-color: #9B9A99;
+}
+
+.catalog h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.pagination {
+    width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+input[name="r"] {
+    display: none;
+}
+
+.pagination .slide {
+    width: 25%;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.pagination .slide-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.slide-row a {
+    color: #333;
+}
+
+.pagination .slide-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #DED4CB;
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+
+.pagination .slide-card:hover {
+    transform: translateY(-10px);
+}
+
+.slide-card {
+    position: relative;
+}
+
+.slide-card .main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slide-card .price {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    color: #979797;
+    font-size: 20px;
+}
+
+.slide-card .price .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.slide-card .price .price-row h4 {
+    font-size: 28px;
+    color: #333;
+}
+
+.past-price {
+    position: relative;
+}
+
+.past-price .price-line {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: rotate(-6deg);
+    height: 2px;
+    width: 90px;
+    background-color: #D42222;
+}
+
+.slide-card button {
+    align-self: center;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.slide-card button:hover {
+    background-color: transparent;
+    color: #333;
+}
+
+.slide-card .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.slide-card .text h3 {
+    font-size: 28px;
+}
+
+.slide-card .card-new {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.navigation {
+    align-self: center;
+    display: flex;
+    gap: 20px;
+}
+
+.lab {
+    width: 55px;
+    height: 55px;
+    background-color: #9B9A99;
+    color: white;
+    padding: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.lab:hover {
+    background-color: #333;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -25%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -50%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -75%;
+}
+
+/* Catalog end */
+
+/* Tovar */
+.tovar {
+    margin-top: 11vh;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tovar-content {
+    display: flex;
+    gap: 20px;
+}
+
+.fotos {
+    display: flex;
+    gap: 20px;
+}
+
+.foto-asside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto-asside img {
+    height: 200px;
+    width: 170px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.m-foto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.main-foto {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 700px;
+    width: 600px;
+    position: relative;
+}
+
+.main-foto .slides {
+    height: 100%;
+}
+
+.main-foto img {
+    height: 700px;
+    width: 600px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about .title {
+    color: #333;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.about .title h2 {
+    font-size: 36px;
+}
+
+.forschose {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.forschose .main-btn {
+    align-self: start;
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid #333;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.forschose .main-btn:hover {
+    background-color: transparent;
+    color: #333;
+}
+
+.size {
+    color: #283618;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.size .buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.size button {
+    padding: 15px 35px;
+    border: none;
+    color: #333;
+    border-bottom: 1px solid #333;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.size .buttons .act {
+    border: 1px solid #333;
+}
+
+.about .price {
+    color: #979797;
+    font-size: 20px;
+}
+
+.about .price-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #979797;
+}
+
+.about .price-row h4 {
+    font-size: 28px;
+    color: #333;
+}
+
+.about .color {
+    font-size: 20px;
+    color: #283618;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about .color button {
+    height: 57px;
+    width: 57px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 17px;
+    color: #333;
+}
+
+.description .des-main {
+    display: flex;
+    align-items: center;
+    color: #283618;
+    font-size: 20px;
+    gap: 20px;
+}
+/* Tovar end */
+
+/* Basket */
+.basket {
+    margin-top: 11vh;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.basket h2 {
+    font-size: 36px;
+    color: #283618;
+    text-transform: uppercase;
+}
+
+.basket button {
+    background-color: #283618;
+    color: white;
+    border: 3px solid #283618;
+    padding: 30px;
+    font-size: 32px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.basket button:hover {
+    background-color: transparent;
+    color: #283618;
+}
+
+.itog {
+    align-self: end;
+    text-align: right;
+    font-size: 20px;
+    color: #283618;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.itog h4 {
+    font-size: 28px;
+}
+
+.basket .foto {
+    height: 300px;
+}
+
+.basket table {
+    width: 100%;
+    border: none;
+}
+
+.basket td {
+    padding: 15px;
+    font-size: 20px;
+    color: #283618;
+}
+
+.basket th {
+    text-align: left;
+    border-bottom: 2px solid #979797;
+    font-size: 32px;
+    color: #283618;
+    font-weight: normal;
+    padding: 15px;
+}
+
+.basket .blok {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.basket .blok-text {
+    color: #acacac;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.basket .blok-text h3 {
+    color: #333;
+    font-size: 26px;
+}
+
+.kol-vo {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.kol-vo p {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.del {
+    cursor: pointer;
+}
+/* Basket end */
